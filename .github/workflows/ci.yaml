@@ -9,7 +9,32 @@ on:
       - '.gitignore'
 
 jobs:
+  # 1. Code Quality & Test Stage
+  test-and-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Code Quality Check (Linting)
+        run: npm run lint
+
+      - name: App Build Check
+        run: npm run build
+
+  # 2. Docker Build & Push Stage
   build-and-push:
+    needs: test-and-lint
     runs-on: ubuntu-latest
 
     steps:
@@ -32,5 +57,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            gaviru2022/memlogic-pro:latest
-            gaviru2022/memlogic-pro:v1
+            gaviruthejana/memlogic-pro:latest
+            gaviruthejana/memlogic-pro:v${{ github.run_number }}
