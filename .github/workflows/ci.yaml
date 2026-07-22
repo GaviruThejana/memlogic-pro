@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch: # Manual run කිරීමට මෙන්න මේ පේළිය එකතු කරන්න
-  paths-ignore:
-    - 'README.md'
-    - '.gitignore'
+    paths-ignore:
+      - 'README.md'
+      - '.gitignore'
+  workflow_dispatch:
 
 jobs:
   test-and-lint:
