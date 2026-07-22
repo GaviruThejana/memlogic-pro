@@ -349,10 +349,10 @@ export default function MemLogicPro() {
           {/* Footer */}
           <footer className="border-t border-muted p-6 text-center text-xs text-muted-foreground space-y-1">
             <p className="font-semibold text-foreground tracking-wide">
-              RAM Technologies
+              Gaviru Thejana
             </p>
             <p>Computer Department, University of Jaffna</p>
-            <p className="text-muted-foreground/60 mt-1">© 2024 MemLogic Pro | Advanced OS Page Replacement Simulator</p>
+            <p className="text-muted-foreground/60 mt-1">©MemLogic Pro | Advanced OS Page Replacement Simulator</p>
           </footer>
         </SidebarInset>
       </div>
