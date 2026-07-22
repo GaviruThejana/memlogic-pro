@@ -1,5 +1,6 @@
 Live Public Link-
-           memlogic-ro7yc41yr-gaviru.vercel.app
+      memlogic-pro.vercel.app
+
 
 🧠 MemLogic Pro
 MemLogic Pro is an interactive, visual web application built to simulate and analyze Operating System Page Replacement Algorithms. Designed with Next.js, TypeScript, and modern UI components, it delivers real-time visualization, step-by-step analytics, and dynamic metric comparisons.
