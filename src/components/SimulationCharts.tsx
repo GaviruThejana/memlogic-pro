@@ -58,7 +58,7 @@ export function SimulationCharts({ comparisonData, beladyData, activeAlgorithm }
 
       <Card className="bg-card border-muted">
         <CardHeader>
-          <CardTitle className="text-lg font-headline text-primary">Bélády's Anomaly Analysis</CardTitle>
+          <CardTitle className="text-lg font-headline text-primary">Bélády&apos;s Anomaly Analysis</CardTitle>
         </CardHeader>
         <CardContent className="h-[300px]">
           <ResponsiveContainer width="100%" height="100%">
