@@ -4,12 +4,12 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - 'README.md'
-      - '.gitignore'
+  workflow_dispatch: # Manual run කිරීමට මෙන්න මේ පේළිය එකතු කරන්න
+  paths-ignore:
+    - 'README.md'
+    - '.gitignore'
 
 jobs:
-  # 1. Code Quality & Test Stage
   test-and-lint:
     runs-on: ubuntu-latest
 
@@ -20,7 +20,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
 
       - name: Install Dependencies
@@ -32,7 +32,6 @@ jobs:
       - name: App Build Check
         run: npm run build
 
-  # 2. Docker Build & Push Stage
   build-and-push:
     needs: test-and-lint
     runs-on: ubuntu-latest
